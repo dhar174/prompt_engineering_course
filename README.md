@@ -66,7 +66,8 @@ jupyter notebook
 ```
 ## Helpful Guides
 - [Append a Row to CSV or Google Sheet](docs/append_row.md)
-
+## Examples
+- **prompt_block_io_demo.py** – demonstrates saving and loading prompt blocks from JSON or YAML files.
 
 ## Token Counting
 
