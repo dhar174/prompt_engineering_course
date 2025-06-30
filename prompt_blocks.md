@@ -60,7 +60,7 @@ import json
 with open("prompt_blocks.json") as f:
     blocks = json.load(f)
 
-template = Template("""{{ system }}\nUser: {{ user }}""")
+template = Template("{{ system }}\nUser: {{ user }}")
 final_prompt = template.render(**blocks)
 print(final_prompt)
 ```
