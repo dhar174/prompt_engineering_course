@@ -1,52 +1,63 @@
 # Prompt Engineering Course
 
-This repo contains a collection of Jupyter notebooks demonstrating various prompt engineering techniques and tools. Use them as interactive playgrounds or reference examples when building your own LLM workflows.
+This repository contains a collection of Jupyter notebooks demonstrating key prompt engineering techniques.
 
 ## Notebook Overview
 
-- **LangGraph_Chatbot.ipynb** – LangGraph chatbot with long‑term memory, agentic behavior, and real‑time streaming.
-- **chatbot_with_memory.ipynb** – Persist conversation history across turns using LangGraph memory.
-- **decoding_parameters_playground.ipynb** – Explore temperature, top‑p, and frequency/presence penalties.
-- **decoding_strategies_playground.ipynb** – Compare deterministic vs. stochastic decoding strategies.
-- **function_calling_demo.ipynb** – Convert user intent to structured arguments and call Python functions.
-- **modular_prompt_library_builder.ipynb** – Build reusable prompt blocks with Jinja2 and save them to JSON.
-- **pal_plan_act_pipeline.ipynb** – Let the model generate Python, execute it, then ask for an explanation.
-- **persona_roleplay_workbench.ipynb** – Create multi‑persona role‑play scenarios with tone and length controls.
-- **prompt_anatomy_template.ipynb** – Template prompts with system/user/assistant roles and placeholders.
-- **prompt_versioning_failure_log.ipynb** – Track prompt iterations and failures for robustness analysis.
-- **prompt_versioning_tracker.ipynb** – Log prompt versions with outcomes and notes; export to CSV or Sheets.
-- **self_consistency_uncertainty.ipynb** – Generate multiple answers, vote for consensus, and capture confidence.
-- **shot_prompt_patterns.ipynb** – Try zero‑shot, one‑shot, and few‑shot prompting techniques.
-- **structured_output_validation.ipynb** – Produce JSON‑only responses, validate them, and retry on errors.
-- **tokenization_playground.ipynb** – Inspect tokenization for different models and context‑window limits.
+| Notebook | Learning goal |
+| --- | --- |
+| `LangGraph_Chatbot.ipynb` | LangGraph chatbot with long-term memory, tool use, and streaming responses. |
+| `chatbot_with_memory.ipynb` | Minimal chatbot that maintains conversation state. |
+| `decoding_parameters_playground.ipynb` | Explore temperature, top-p and penalty parameters. |
+| `decoding_strategies_playground.ipynb` | Compare deterministic vs stochastic decoding strategies. |
+| `function_calling_demo.ipynb` | Convert user intent to structured arguments and call Python functions. |
+| `modular_prompt_library_builder.ipynb` | Build reusable prompt blocks with Jinja2 and track token counts. |
+| `pal_plan_act_pipeline.ipynb` | Use a Plan-then-Act pipeline where the LLM writes Python and explains the result. |
+| `persona_roleplay_workbench.ipynb` | Create multi-persona role‑play scenarios with tone and length controls. |
+| `prompt_anatomy_template.ipynb` | Template prompts using System/User/Assistant sections. |
+| `prompt_versioning_failure_log.ipynb` | Record failures while iterating on prompts. |
+| `prompt_versioning_tracker.ipynb` | Log prompt versions locally or to Google Sheets. |
+| `self_consistency_uncertainty.ipynb` | Generate multiple answers and capture model confidence. |
+| `shot_prompt_patterns.ipynb` | Playground for zero-, one-, and few-shot prompting. |
+| `structured_output_validation.ipynb` | Produce JSON-only responses and validate them. |
+| `tokenization_playground.ipynb` | Visualize tokenization and context window limits. |
 
-For quick access to all notebooks, see the optional [index.ipynb](index.ipynb) file.
+## Dependencies
 
-## Requirements
+All notebooks require an **OpenAI API key** set as `OPENAI_API_KEY`. Common packages used include:
 
-Most notebooks rely on the OpenAI API and interactive widgets. Install the common packages with:
+- `openai`
+- `langgraph` and `langchain`
+- `tiktoken`
+- `ipywidgets`
+- `pandas`
+- `jinja2`
+- `textstat`
+- `gspread` and `oauth2client`
+- `transformers` (for the tokenization demo)
+- `python-dotenv` (optional for loading environment variables)
+
+Install them with:
 
 ```bash
-pip install -r requirements.txt
+pip install openai langgraph langchain-openai langchain-community tiktoken ipywidgets pandas jinja2 textstat gspread oauth2client transformers python-dotenv
 ```
-
-Set your `OPENAI_API_KEY` environment variable so the notebooks can call the API.
-
-## Running Locally
-
-1. Install dependencies as shown above.
-2. Export `OPENAI_API_KEY` in your shell (or use a `.env` file).
-3. Launch Jupyter and open any notebook:
-   ```bash
-   jupyter notebook
-   ```
 
 ## Running in Google Colab
 
-Open any notebook via the GitHub URL prefixed with `https://colab.research.google.com/`. For example:
+1. Open a notebook on GitHub and select **Open in Colab**.
+2. Run the setup cell to install dependencies.
+3. Enter your `OPENAI_API_KEY` when prompted.
+4. Execute the remaining cells.
 
-```
-https://colab.research.google.com/github/USERNAME/REPO/blob/main/LangGraph_Chatbot.ipynb
+## Running Locally
+
+1. Clone this repository and create a Python virtual environment.
+2. Install the packages listed above.
+3. Export your OpenAI key (`export OPENAI_API_KEY=...`).
+4. Launch Jupyter and open the desired notebook:
+
+```bash
+jupyter notebook
 ```
 
-Colab will prompt you for an `OPENAI_API_KEY` the first time a notebook runs.
