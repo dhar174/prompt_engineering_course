@@ -1,0 +1,13 @@
+openai
+ipywidgets
+pandas
+jinja2
+textstat
+gspread
+oauth2client
+tiktoken
+transformers
+gradio
+langgraph
+langchain-openai
+langchain-community
