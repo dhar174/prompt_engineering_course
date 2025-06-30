@@ -137,3 +137,11 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# FAISS index files
+faiss_index/
