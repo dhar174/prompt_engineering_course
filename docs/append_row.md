@@ -55,5 +55,5 @@ client = gspread.authorize(creds)
 sheet = client.open('PromptVersions').sheet1
 
 # Append the last row from the DataFrame
-sheet.append_row(list(df.iloc[-1]))
+sheet.append_row(df.iloc[-1].tolist())
 ```
