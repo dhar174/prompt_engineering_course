@@ -1,5 +1,9 @@
 
-import os, gradio as gr, openai
+import os
+import argparse
+import gradio as gr
+import openai
+from faiss_helper import load_or_build_index
 
 # -- tiny "vector store" (dict of doc: context). Replace with real DB later --
 DOCS = {
@@ -9,10 +13,15 @@ DOCS = {
 
 openai.api_key = os.getenv("OPENAI_API_KEY", "sk-...")
 
-def retrieve(query, k=1):
-    # naive keyword match
-    best = sorted(DOCS.items(), key=lambda x: int(x[0].lower() in query.lower()), reverse=True)
-    return [ctx for _, ctx in best[:k]]
+# Global FAISS index populated at runtime
+INDEX = None
+
+def retrieve(query: str, k: int = 1):
+    """Search the FAISS index for relevant documents."""
+    if INDEX is None:
+        raise ValueError("FAISS index not initialized")
+    results = INDEX.similarity_search(query, k=k)
+    return [doc.page_content for doc in results]
 
 def chat(query):
     context = "\n".join(retrieve(query))
@@ -31,4 +40,10 @@ with gr.Blocks() as demo:
     inp.submit(chat, inp, out)
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--faiss", help="Path to existing FAISS index", default=os.getenv("FAISS_INDEX_PATH"))
+    parser.add_argument("--local-model", action="store_true", help="Use local embeddings instead of OpenAI")
+    args = parser.parse_args()
+
+    INDEX = load_or_build_index(DOCS, path=args.faiss, use_openai=not args.local_model)
     demo.launch()
