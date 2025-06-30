@@ -1,6 +1,7 @@
 # prompt_engineering_course
 Full course content for Prompt Engineering
 
+
 # Prompt Engineering Course
 
 This repository contains a collection of Jupyter notebooks demonstrating key prompt engineering techniques.
@@ -63,4 +64,5 @@ pip install openai langgraph langchain-openai langchain-community tiktoken ipywi
 ```bash
 jupyter notebook
 ```
-
+## Helpful Guides
+- [Append a Row to CSV or Google Sheet](docs/append_row.md)
