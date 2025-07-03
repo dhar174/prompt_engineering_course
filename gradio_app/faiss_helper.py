@@ -1,7 +1,7 @@
 import os
 from typing import Dict, List, Optional
-from langchain.vectorstores import FAISS
-from langchain.embeddings import OpenAIEmbeddings, HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import OpenAIEmbeddings, HuggingFaceEmbeddings
 
 
 def get_embeddings(use_openai: bool = True):

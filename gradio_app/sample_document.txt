@@ -1,0 +1,47 @@
+# Sample Document: Machine Learning Fundamentals
+
+## Introduction to Machine Learning
+
+Machine Learning (ML) is a subset of artificial intelligence that enables computers to learn and make decisions from data without being explicitly programmed for every task.
+
+## Key Types of Machine Learning
+
+### Supervised Learning
+- Uses labeled training data
+- Examples: classification, regression
+- Common algorithms: linear regression, decision trees, neural networks
+
+### Unsupervised Learning
+- Works with unlabeled data
+- Examples: clustering, dimensionality reduction
+- Common algorithms: k-means, PCA, autoencoders
+
+### Reinforcement Learning
+- Learns through interaction with environment
+- Uses reward and punishment system
+- Examples: game playing, robotics, autonomous vehicles
+
+## Applications
+
+Machine learning is used in:
+- Natural language processing
+- Computer vision
+- Recommendation systems
+- Fraud detection
+- Medical diagnosis
+- Autonomous vehicles
+
+## Getting Started
+
+To begin with machine learning:
+1. Learn Python programming
+2. Understand statistics and linear algebra
+3. Practice with datasets
+4. Study common algorithms
+5. Work on real projects
+
+## Popular Libraries
+
+- **Python**: scikit-learn, TensorFlow, PyTorch
+- **R**: caret, randomForest, e1071
+- **JavaScript**: TensorFlow.js, ML5.js
