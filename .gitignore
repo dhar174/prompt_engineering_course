@@ -138,6 +138,20 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# FAISS index files
+*.faiss
+*.pkl
+*.index
+
+# HuggingFace cache
+.cache/
+huggingface/
+
 # Python cache
 __pycache__/
 *.pyc
