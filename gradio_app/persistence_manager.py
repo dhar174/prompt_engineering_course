@@ -121,20 +121,22 @@ class BatchedPersistenceManager:
             return False
         
         try:
+            # Check if save is necessary
             with self._lock:
                 if not self._is_dirty:
                     return True
-                
-                # Save to disk
-                self.index.save_local(self.index_path)
-                
-                # Reset state
+            
+            # Save to disk (release lock before disk write)
+            self.index.save_local(self.index_path)
+            
+            # Reacquire lock to update state
+            with self._lock:
                 self._pending_docs = 0
                 self._last_save_time = time.time()
                 self._is_dirty = False
-                
-                logger.info(f"Saved FAISS index to {self.index_path}")
-                return True
+            
+            logger.info(f"Saved FAISS index to {self.index_path}")
+            return True
                 
         except Exception as e:
             logger.error(f"Failed to save FAISS index: {e}")
