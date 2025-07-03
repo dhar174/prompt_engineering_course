@@ -4,8 +4,6 @@ import argparse
 import gradio as gr
 import openai
 from faiss_helper import load_or_build_index
-from typing import List, Optional
-import tempfile
 import json
 from langchain_core.documents import Document
 
