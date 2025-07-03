@@ -27,23 +27,23 @@ def retrieve(query: str, k: int = 1):
     results = INDEX.similarity_search(query, k=k)
     return [doc.page_content for doc in results]
 
-def process_uploaded_file(file) -> str:
+def process_uploaded_file(file_path) -> str:
     """Process uploaded file and return its content."""
-    if file is None:
+    if file_path is None:
         return "No file uploaded"
     
     try:
         # Read file content
-        if file.name.endswith('.txt'):
-            with open(file.name, 'r', encoding='utf-8') as f:
+        if file_path.endswith('.txt'):
+            with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-        elif file.name.endswith('.json'):
-            with open(file.name, 'r', encoding='utf-8') as f:
+        elif file_path.endswith('.json'):
+            with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 content = json.dumps(data, indent=2)
         else:
             # For other file types, try to read as text
-            with open(file.name, 'r', encoding='utf-8') as f:
+            with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
         
         return content
