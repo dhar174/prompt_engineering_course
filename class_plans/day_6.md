@@ -189,5 +189,3 @@ Absolutely! Here’s a **detailed, comprehensive lesson plan for Day 6** of your
 **By end of Day 6:**
 Students will be able to build retrieval-augmented, domain-adapted, personalized, and even multimodal prompts and mini-apps using both code and no-code tools.
 They’ll be prepared for advanced prompt optimization and soft/embedding-based prompt engineering on Day 7.
-
-Want slides, labs, or examples for this day, or shall we proceed to Day 7?
