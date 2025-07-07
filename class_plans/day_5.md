@@ -176,5 +176,3 @@ Here you go—a detailed, minute-by-minute plan for **Day 5**. This day is a maj
 
 **By end of Day 5:**
 Students will have hands-on mastery of all major advanced reasoning prompt patterns, will know how to chain and critique complex reasoning, and can set up iterative, reflective pipelines for multi-step tasks and error reduction.
-
-Would you like slides, code notebooks, or peer review templates for Day 5, or want to move ahead to Day 6?
