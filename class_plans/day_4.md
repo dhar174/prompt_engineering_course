@@ -168,5 +168,3 @@ Absolutely! Here’s a **comprehensive, minute-by-minute Day 4 plan** for your P
 **By end of Day 4:**
 Students will be able to create prompts for structured output, automate API or tool use, build basic prompt pipelines, prompt the model to write/validate prompts, and set up plan-execute workflows.
 They’ll be ready for advanced reasoning patterns and multi-step agentic tasks on Day 5.
-
-Would you like a code lab, slides, or handout for any Day 4 segment? Or move on to Day 5?
