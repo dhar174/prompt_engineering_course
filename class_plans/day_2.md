@@ -131,5 +131,3 @@ Absolutely! Here’s a **fully detailed, skillfully integrated Day 2 lesson plan
 
 **By end of Day 2:**
 Students can design, analyze, and debug basic and complex prompt patterns, manipulate persona and expert roles, enforce clarity and tone, and collaborate on prompt engineering in a professional, reproducible way.
-
-Ready for Day 3, Charles? Or do you want code notebooks, slides, or extra exercises for today’s blocks?
