@@ -25,6 +25,11 @@ This repository contains a collection of Jupyter notebooks demonstrating key pro
 | `shot_prompt_patterns.ipynb` | Playground for zero-, one-, and few-shot prompting. |
 | `structured_output_validation.ipynb` | Produce JSON-only responses and validate them. |
 | `tokenization_playground.ipynb` | Visualize tokenization and context window limits. |
+| `day7_auto_prompt_opro.ipynb` | AutoPrompt & OPRO for automated gradient-based prompt engineering. |
+| `day7_embedding_prompt_lab.ipynb` | Embedding-based retrieval prompt lab with FAISS and RAG pipeline. |
+| `day7_multilingual_lab.ipynb` | Multilingual and cross-lingual prompting with mT5. |
+| `day7_negative_prompting.ipynb` | Negative prompting and textual inversion with Stable Diffusion XL. |
+| `day7_soft_prompt_tuning.ipynb` | Soft prompting and prompt tuning with PEFT library. |
 
 ## Dependencies
 
