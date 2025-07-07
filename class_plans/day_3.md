@@ -142,5 +142,3 @@ Absolutely! Here is a **comprehensive, step-by-step plan for Day 3**, following 
 
 **By end of Day 3:**
 Students will understand how LLM outputs are generated and controlled, how to systematically test and debug prompts, how to start tracking prompt versions and failures, and how advanced “soft” prompts fit into the landscape.
-
-Want the same treatment for Day 4, or would you like a code notebook, slide set, or exercise pack for this day first?
