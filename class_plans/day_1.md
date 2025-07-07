@@ -111,5 +111,3 @@ Absolutely! Here is a **detailed, minute-by-minute teaching plan for Day 1** of 
 
 **By the end of Day 1:**
 Every student can *explain how an LLM “sees” their prompt, how to control the prompt’s structure and style, how to set limits and steer outputs, and how to start debugging basic prompt failures.*
-
-Let me know if you want the next day broken down just as deeply—or if you want handouts, slides, code notebooks, or exercises for any block!
