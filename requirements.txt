@@ -12,3 +12,5 @@ langgraph
 langchain-openai
 langchain-community
 faiss-cpu
+PyYAML
+sentence-transformers
