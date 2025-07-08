@@ -28,5 +28,5 @@ def main():
     print("JSON blocks:", json_lib)
     print("YAML blocks:", yaml_lib)
 
-if __name__=="main":
+if __name__ == "__main__":
     main()
