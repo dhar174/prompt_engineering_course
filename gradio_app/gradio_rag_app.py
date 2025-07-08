@@ -73,7 +73,7 @@ def add_document_to_index(content: str, title: str = "Uploaded Document") -> str
 
     if INDEX is None:
         return "Index not initialized"
-    assert INDEX is not None
+    raise ValueError("FAISS index is not initialized")
 
     try:
         # Create a new document
