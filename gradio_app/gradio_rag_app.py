@@ -91,14 +91,16 @@ def force_save_index() -> str:
     """Force an immediate save of the FAISS index."""
     global INDEX
     try:
-        if INDEX and hasattr(INDEX, 'force_save'):
+        if INDEX is None:
+            return "❌ Index not initialized"
+        elif not hasattr(INDEX, 'force_save'):
+            return "❌ Index lacks save functionality"
+        else:
             success = INDEX.force_save()
             if success:
                 return "✅ Index saved successfully to disk"
             else:
                 return "❌ Failed to save index"
-        else:
-            return "❌ No index available to save"
     except Exception as e:
         return f"❌ Error saving index: {str(e)}"
 
