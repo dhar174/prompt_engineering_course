@@ -31,11 +31,17 @@ This repository contains a collection of Jupyter notebooks demonstrating key pro
 | `day7_negative_prompting.ipynb` | Negative prompting and textual inversion with Stable Diffusion XL. |
 | `day7_soft_prompt_tuning.ipynb` | Soft prompting and prompt tuning with PEFT library. |
 | `day8_adversarial_robustness_logging.ipynb` | Red-team prompts, log failures, and apply robustness patches. |
+| `day8_adversarial_robustness_logging_a.ipynb` | Answer key for adversarial robustness and logging exercises. |
 | `day8_bias_alignment_constitutional.ipynb` | Apply bias-reduction and constitutional alignment techniques. |
+| `day8_bias_alignment_constitutional_a.ipynb` | Answer key for bias mitigation and constitutional AI exercises. |
 | `day8_guardrails_moderation.ipynb` | Implement prompt isolation, input sanitization, and output moderation defenses. |
+| `day8_guardrails_moderation_a.ipynb` | Answer key for guardrails and moderation exercises. |
 | `day8_moderation_toolkits.ipynb` | Use OpenAI moderation API and PromptLayer for content filtering and logging. |
+| `day8_moderation_toolkits_a.ipynb` | Answer key for moderation toolkits exercises. |
 | `day8_privacy_consent_regulatory.ipynb` | Build prompts that handle PII, consent, and regulatory compliance rules. |
+| `day8_privacy_consent_regulatory_a.ipynb` | Answer key for privacy, consent, and regulatory compliance exercises. |
 | `day8_prompt_injection_jailbreak.ipynb` | Understand and demonstrate prompt injection and jailbreak attacks. |
+| `day8_prompt_injection_jailbreak_a.ipynb` | Answer key for prompt injection and jailbreak exercises. |
 | `Lab1_Chaining_and_Orchestration.ipynb` | Build modular prompt pipelines using LangChain (Day 9 content). |
 | `Lab2_Multi_Agent_Workflows.ipynb` | Design cooperating LLM agents with tool use and memory (Day 11 content). |
 | `Lab3_Logging_Deployment_Eval.ipynb` | Track, scale, and evaluate prompt-driven applications (Day 10 content). |
