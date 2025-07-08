@@ -1,4 +1,3 @@
-
 import os
 import argparse
 import gradio as gr
@@ -31,6 +30,7 @@ def cleanup_index():
     if INDEX and hasattr(INDEX, "shutdown"):
         INDEX.shutdown()
 
+
 # Register cleanup function
 atexit.register(cleanup_index)
 
@@ -42,6 +42,7 @@ def retrieve(query: str, k: int = 1):
     results = INDEX.similarity_search(query, k=k)
     return [doc.page_content for doc in results]
 
+
 def process_uploaded_file(file_path) -> str:
     """Process uploaded file and return its content."""
     if file_path is None:
@@ -49,16 +50,16 @@ def process_uploaded_file(file_path) -> str:
 
     try:
         # Read file content
-        if file_path.endswith('.txt'):
-            with open(file_path, 'r', encoding='utf-8') as f:
+        if file_path.endswith(".txt"):
+            with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
-        elif file_path.endswith('.json'):
-            with open(file_path, 'r', encoding='utf-8') as f:
+        elif file_path.endswith(".json"):
+            with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 content = json.dumps(data, indent=2)
         else:
             # For other file types, try to read as text
-            with open(file_path, 'r', encoding='utf-8') as f:
+            with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
 
         return content
@@ -105,7 +106,7 @@ def force_save_index() -> str:
         if INDEX is None:
             return "❌ No index available to save"
         assert INDEX is not None
-        if hasattr(INDEX, 'force_save'):
+        if hasattr(INDEX, "force_save"):
             success = INDEX.force_save()
             if success:
                 return "✅ Index saved successfully to disk"
@@ -118,7 +119,7 @@ def force_save_index() -> str:
 def get_index_status() -> str:
     """Get the current persistence status of the index."""
     try:
-        if INDEX and hasattr(INDEX, 'get_pending_count'):
+        if INDEX and hasattr(INDEX, "get_pending_count"):
             pending = INDEX.get_pending_count()
             dirty = INDEX.is_dirty()
             assert INDEX is not None
@@ -142,25 +143,35 @@ def chat(query: str, top_k: int):
 
     try:
         context = "\n".join(retrieve(query, k=top_k))
-        prompt = f"Answer the question using ONLY the context below.\n\nContext:\n{context}\n\nQ: {query}\nA:"
+        prompt = (
+            "Answer the question using ONLY the context below.\n\n"
+            f"Context:\n{context}\n\nQ: {query}\nA:"
+        )
         resp = openai.ChatCompletion.create(
             model="gpt-4o-mini",
-            messages=[{"role":"user","content": prompt}],
-            temperature=0
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0,
         )
         return resp.choices[0].message.content.strip()
     except Exception as e:
         return f"Error: {str(e)}"
 
+
 with gr.Blocks(title="🧑‍💻 RAG Chatbot with File Upload") as demo:
     gr.Markdown("# 🧑‍💻 No‑Code RAG Chatbot (Gradio)")
-    gr.Markdown("Upload documents to expand the knowledge base and adjust retrieval parameters.")
+    gr.Markdown(
+        "Upload documents to expand the knowledge base and adjust retrieval parameters."
+    )
 
     with gr.Row():
         # Main chat area
         with gr.Column(scale=3):
             with gr.Row():
-                inp = gr.Textbox(label="Ask a question", placeholder="Enter your question here...", scale=4)
+                inp = gr.Textbox(
+                    label="Ask a question",
+                    placeholder="Enter your question here...",
+                    scale=4,
+                )
                 submit_btn = gr.Button("Submit", scale=1, variant="primary")
             out = gr.Markdown(label="Answer")
 
@@ -175,22 +186,20 @@ with gr.Blocks(title="🧑‍💻 RAG Chatbot with File Upload") as demo:
                 value=1,
                 step=1,
                 label="Top-K Retrieval",
-                info="Number of documents to retrieve"
+                info="Number of documents to retrieve",
             )
 
             gr.Markdown("### 📁 Upload Documents")
 
             # File upload
             file_upload = gr.File(
-                label="Upload Document",
-                file_types=[".txt", ".json"],
-                type="filepath"
+                label="Upload Document", file_types=[".txt", ".json"], type="filepath"
             )
 
             doc_title = gr.Textbox(
                 label="Document Title",
                 placeholder="Enter a title for the document",
-                value="Uploaded Document"
+                value="Uploaded Document",
             )
 
             upload_btn = gr.Button("Add to Knowledge Base", variant="secondary")
@@ -199,11 +208,15 @@ with gr.Blocks(title="🧑‍💻 RAG Chatbot with File Upload") as demo:
             # Persistence controls
             gr.Markdown("### 💾 Persistence")
 
-            persistence_status = gr.Markdown(label="Status", value="❓ Index status unknown")
+            persistence_status = gr.Markdown(
+                label="Status", value="❓ Index status unknown"
+            )
 
             with gr.Row():
                 save_btn = gr.Button("💾 Save Now", variant="secondary", scale=1)
-                refresh_status_btn = gr.Button("🔄 Refresh", variant="secondary", scale=1)
+                refresh_status_btn = gr.Button(
+                    "🔄 Refresh", variant="secondary", scale=1
+                )
 
     # Event handlers
     def handle_upload(file, title):
@@ -237,14 +250,38 @@ with gr.Blocks(title="🧑‍💻 RAG Chatbot with File Upload") as demo:
     upload_btn.click(handle_refresh_status, outputs=persistence_status)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="RAG Chatbot with batched FAISS persistence")
-    parser.add_argument("--faiss", help="Path to existing FAISS index", default=os.getenv("FAISS_INDEX_PATH"))
-    parser.add_argument("--local-model", action="store_true", help="Use local embeddings instead of OpenAI")
+    parser = argparse.ArgumentParser(
+        description="RAG Chatbot with batched FAISS persistence"
+    )
+    parser.add_argument(
+        "--faiss",
+        help="Path to existing FAISS index",
+        default=os.getenv("FAISS_INDEX_PATH"),
+    )
+    parser.add_argument(
+        "--local-model",
+        action="store_true",
+        help="Use local embeddings instead of OpenAI",
+    )
 
     # Persistence configuration
-    parser.add_argument("--batch-size", type=int, default=5, help="Number of documents to batch before saving (default: 5)")
-    parser.add_argument("--max-wait-time", type=float, default=30.0, help="Maximum time to wait before saving in seconds (default: 30)")
-    parser.add_argument("--no-auto-persist", action="store_true", help="Disable automatic persistence (save immediately)")
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=5,
+        help="Number of documents to batch before saving (default: 5)",
+    )
+    parser.add_argument(
+        "--max-wait-time",
+        type=float,
+        default=30.0,
+        help="Maximum time to wait before saving in seconds (default: 30)",
+    )
+    parser.add_argument(
+        "--no-auto-persist",
+        action="store_true",
+        help="Disable automatic persistence (save immediately)",
+    )
 
     args = parser.parse_args()
 
@@ -255,10 +292,10 @@ if __name__ == "__main__":
         use_openai=not args.local_model,
         batch_size=args.batch_size,
         max_wait_time=args.max_wait_time,
-        auto_persist=not args.no_auto_persist
+        auto_persist=not args.no_auto_persist,
     )
 
-    print(f"🚀 Starting RAG Chatbot with batched persistence:")
+    print("🚀 Starting RAG Chatbot with batched persistence:")
     print(f"   - Batch size: {args.batch_size}")
     print(f"   - Max wait time: {args.max_wait_time}s")
     print(f"   - Auto persist: {not args.no_auto_persist}")

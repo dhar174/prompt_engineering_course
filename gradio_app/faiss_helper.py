@@ -82,5 +82,5 @@ def load_or_build_index(
         index_path=path,
         batch_size=batch_size,
         max_wait_time=max_wait_time,
-        auto_persist=auto_persist
+        auto_persist=auto_persist,
     )
