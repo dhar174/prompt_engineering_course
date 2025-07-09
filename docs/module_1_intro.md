@@ -5,7 +5,8 @@ Welcome to the first module of the Prompt Engineering Course! This module lays t
 ## Learning Objectives
 
 By completing this module you will be able to:
-- **Define prompt engineering** and describe its role in modern AI workflows.
+- **Define prompt engineering** as the practice of crafting textual instructions to guide AI behavior.
+- **Describe the role of prompt engineering** in modern AI workflows, including its impact on model performance and reliability.
 - **Explain why good prompting skills are important** for reliability and controllability.
 - **Identify key terminology** such as *tokens*, *context window*, *system prompt*, and *decoding parameters*.
 - **Recognize the different families of AI models** used for prompting, including proprietary APIs and open-source alternatives.
