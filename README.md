@@ -7,7 +7,7 @@ This course is designed as a hands-on, practical introduction to prompt engineer
 * Understand how language models interpret and respond to prompts
 * Structure prompts using role separation (system/user/assistant)
 * Tune output quality using decoding parameters (`temperature`, `top_p`, etc.)
-* Count tokens and manage context length using tools like tiktoken* 
+* Count tokens and manage context length using tools like tiktoken
 * Create reusable and modular prompt components with `Jinja2`
 * Incorporate function calling, structured outputs, and prompt versioning
 * Build prompt-based applications like chatbots, agents, and RAG pipelines
