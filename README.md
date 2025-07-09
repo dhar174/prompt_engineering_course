@@ -98,6 +98,48 @@ This repository includes a curated collection of hands-on Jupyter notebooks, eac
 | `day7_multilingual_lab.ipynb` | Practice multilingual prompting and cross-lingual generation using models like mT5. |
 | `day7_negative_prompting.ipynb` | Investigate the effects of negative prompting and prompt inversion for image generation. |
 | `day7_soft_prompt_tuning.ipynb` | Experiment with soft prompts and prompt tuning using HuggingFace PEFT and Lora adapters. |
+| `day8_adversarial_robustness_logging.ipynb` | Red-team prompts, log failures, and apply robustness patches. |
+| `day8_adversarial_robustness_logging_a.ipynb` | Answer key for adversarial robustness and logging exercises. |
+| `day8_bias_alignment_constitutional.ipynb` | Apply bias-reduction and constitutional alignment techniques. |
+| `day8_bias_alignment_constitutional_a.ipynb` | Answer key for bias mitigation and constitutional AI exercises. |
+| `day8_guardrails_moderation.ipynb` | Implement prompt isolation, input sanitization, and output moderation defenses. |
+| `day8_guardrails_moderation_a.ipynb` | Answer key for guardrails and moderation exercises. |
+| `day8_moderation_toolkits.ipynb` | Use OpenAI moderation API and PromptLayer for content filtering and logging. |
+| `day8_moderation_toolkits_a.ipynb` | Answer key for moderation toolkits exercises. |
+| `day8_privacy_consent_regulatory.ipynb` | Build prompts that handle PII, consent, and regulatory compliance rules. |
+| `day8_privacy_consent_regulatory_a.ipynb` | Answer key for privacy, consent, and regulatory compliance exercises. |
+| `day8_prompt_injection_jailbreak.ipynb` | Understand and demonstrate prompt injection and jailbreak attacks. |
+| `day8_prompt_injection_jailbreak_a.ipynb` | Answer key for prompt injection and jailbreak exercises. |
+| `Lab1_Chaining_and_Orchestration.ipynb` | Build modular prompt pipelines using LangChain (Day 9 content). |
+| `Lab2_Multi_Agent_Workflows.ipynb` | Design cooperating LLM agents with tool use and memory (Day 11 content). |
+| `Lab3_Logging_Deployment_Eval.ipynb` | Track, scale, and evaluate prompt-driven applications (Day 10 content). |
+| `00_Kickstart_Gap_Map.ipynb` | Orientation and gap assessment for prompt engineering fundamentals. |
+| `00_Overview_Day10.ipynb` | Introduction to evaluation metrics and deployment strategies. |
+| `00_Overview_Day10_b.ipynb` | Advanced evaluation frameworks and testing methodologies. |
+| `01_Metrics_and_HumanEval.ipynb` | Learn evaluation metrics and human-in-the-loop assessment techniques. |
+| `01_Style_Structured_Formatting_Lab.ipynb` | Practice prompt styling and structured output formatting. |
+| `02_Automated_Eval_AB_Testing.ipynb` | Implement automated evaluation pipelines and A/B testing for prompts. |
+| `02_Length_Reading_Level_Tone.ipynb` | Control output length, reading level, and tone in generated content. |
+| `03_Benchmarking_Suites.ipynb` | Build comprehensive benchmarking suites for prompt performance evaluation. |
+| `03_Error_Spotting_Feedback_Loops.ipynb` | Create feedback loops for error detection and prompt improvement. |
+| `04_Application_Quick_Hits.ipynb` | Deploy prompt-based applications with quick wins and practical use cases. |
+| `04_Robustness_and_Adversarial.ipynb` | Build robust prompts that withstand adversarial inputs and edge cases. |
+| `05_Continuous_Optimization_and_Capstone.ipynb` | Implement continuous optimization workflows and capstone project planning. |
+| `05_Group_Prompting_Community.ipynb` | Explore collaborative prompting techniques and community-driven approaches. |
+| `06_Advanced_Adversarial_Fuzzing.ipynb` | Advanced techniques for adversarial testing and prompt fuzzing. |
+| `06_HITL_Constraint_Balancing.ipynb` | Human-in-the-loop constraint balancing and preference optimization. |
+| `07_Frontier_Research_Wrap.ipynb` | Overview of cutting-edge research and future directions in prompt engineering. |
+| `07_StatSig_and_Sequential_AB.ipynb` | Statistical significance testing and sequential A/B testing for prompts. |
+| `08_CI_CD_GitHub_Actions.ipynb` | Implement CI/CD pipelines for prompt-based applications using GitHub Actions. |
+| `09_Bias_and_Fairness_Eval.ipynb` | Evaluate and mitigate bias in prompt outputs for fairness and ethics. |
+| `day12_1_orientation_QA.ipynb` | Advanced course orientation and Q&A session. |
+| `day12_2_test_driven_prompting.ipynb` | Test-driven development approaches for prompt engineering. |
+| `day12_3_misunderstanding_ambiguity.ipynb` | Handle misunderstandings and ambiguity in prompt responses. |
+| `day12_4_cross_model_interop.ipynb` | Achieve cross-model interoperability and prompt portability. |
+| `day12_5_active_learning_loops.ipynb` | Implement active learning loops for continuous prompt improvement. |
+| `day12_6_traceable_reasoning.ipynb` | Build traceable reasoning chains for transparent AI decision-making. |
+| `day12_7_search_integrated_deep_research.ipynb` | Integrate search capabilities for deep research and knowledge retrieval. |
+| `day12_8_release_radar_ethics.ipynb` | Monitor release radar and implement ethical guidelines for AI deployment. |
 
 > 💡 **Tip:** Each notebook builds on foundational concepts and introduces hands-on tasks. Feel free to modify prompts, adjust parameters, and explore what works best for your use case.
 
