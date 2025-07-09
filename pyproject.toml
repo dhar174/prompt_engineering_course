@@ -1,0 +1,7 @@
+[tool.ruff]
+exclude = ["*.ipynb"]
+line-length = 100
+
+[tool.flake8]
+max-line-length = 100
+exclude = "*.ipynb"
