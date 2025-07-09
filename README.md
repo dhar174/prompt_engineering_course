@@ -372,7 +372,7 @@ git push origin your-feature-name
 ```
 8. Open a pull request (PR) with a description of what you changed and why.
 
-9 . **IMPORTANT: Code Style & linting**
+9. **IMPORTANT: Code Style & linting**
 This repo uses flake8 and ruff for code linting. Make sure your code:
 
 * Has a max line length of 100 characters.
