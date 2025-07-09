@@ -277,7 +277,7 @@ jupyter notebook
 ```
 ### E. Use Tools & References
 This repo includes companion resources:
-*  Cheatsheets: `prompt_control_cheatsheet.md`,`, common_prompt_pitfalls.md`
+*  Cheatsheets: `prompt_control_cheatsheet.md`, common_prompt_pitfalls.md`
 *  Token limits: `token_count_reference.md`
 *  GitHub issue workflows: `agentss.md` (how to create issues via CLI, API, or Python)
 *  Version tracking: `prompt_versioning_tracker.ipynb`
