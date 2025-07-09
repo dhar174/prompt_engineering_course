@@ -78,16 +78,23 @@ def markdown_to_story(md_text, styles):
 
         # 4. bullet list block
         if line.lstrip().startswith(("- ", "* ")):
-            items = []
-            while i < len(lines) and lines[i].lstrip().startswith(("- ", "* ")):
-                bullet = lines[i].lstrip()[2:].strip()
-                # Handle nested bullets
-                indent_level = (len(lines[i]) - len(lines[i].lstrip())) // 2
-                bullet_html = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", bullet)
-                bullet_html = re.sub(r"\*(.+?)\*", r"<i>\1</i>", bullet_html)
-                bullet_html = re.sub(r"`([^`]+)`", r"<font name='Courier'>\1</font>", bullet_html)
-                items.append(ListItem(Paragraph(bullet_html, styles["BodyText"])))
-                i += 1
+            def parse_list(lines, start_index, base_indent):
+                items, i = [], start_index
+                while i < len(lines) and lines[i].lstrip().startswith(("- ", "* ")):
+                    bullet = lines[i].lstrip()[2:].strip()
+                    indent_level = (len(lines[i]) - len(lines[i].lstrip())) // 2
+                    bullet_html = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", bullet)
+                    bullet_html = re.sub(r"\*(.+?)\*", r"<i>\1</i>", bullet_html)
+                    bullet_html = re.sub(r"`([^`]+)`", r"<font name='Courier'>\1</font>", bullet_html)
+                    if indent_level > base_indent:
+                        sublist, i = parse_list(lines, i, indent_level)
+                        items.append(ListFlowable(sublist, bulletType="bullet"))
+                    else:
+                        items.append(ListItem(Paragraph(bullet_html, styles["BodyText"])))
+                        i += 1
+                return items, i
+            
+            items, i = parse_list(lines, i, 0)
             story.append(ListFlowable(items, bulletType="bullet"))
             story.append(Spacer(1, 6))
             continue
