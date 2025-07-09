@@ -288,7 +288,7 @@ This repo includes companion resources:
 * Log, test, and iterate with versioning notebooks.
 
 ### G.  Learn by Debugging
-Many notebooks include deliberate pitfalls, e.g.,:
+Many notebooks include deliberate pitfalls, e.g.:
 * Hallucinated outputs
 * Broken formats
 * Repetitive completions
