@@ -74,4 +74,30 @@
 | Response too short or cut off | Raise `max_tokens` |
 | Unclear response | Add examples and rephrase |
 | Too repetitive | Use frequency penalty |
-| Off-topic or
+| Off-topic or inconsistent | Clarify role and context |
+
+---
+
+## 9. Quick Examples
+| Control | Example Prompt |
+|--------|----------------|
+| Output Length | Write exactly 15 words about AI. |
+| Style & Tone | Explain quantum mechanics to a 5th grader in a cheerful tone. |
+| Role | You are a Unix shell. Output only shell commands. |
+| Output Format | Respond with a JSON object summarizing the main point. |
+| Creativity (Temperature) | (API param) temperature=0.8 |
+| Convergent/Divergent | Give three possible summaries vs. one single best summary. |
+
+---
+
+## 10. Quick Diagnostic
+- **Output too random?** → Lower temp/top-p.
+- **Repeating?** → Add frequency penalty.
+- **Format wrong?** → Clarify structure and give example.
+
+---
+
+## Reference Links
+- [OpenAI API](https://platform.openai.com/docs)
+- [HuggingFace Transformers](https://huggingface.co/docs/transformers)
+- [Prompting Guide](https://www.promptingguide.ai)
