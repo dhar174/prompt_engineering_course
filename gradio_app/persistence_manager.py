@@ -187,4 +187,5 @@ class BatchedPersistenceManager:
 
     @property
     def docstore(self):
-        """Access the underlying docstore."""        return self.index.docstore
+        """Access the underlying docstore."""
+        return self.index.docstore
