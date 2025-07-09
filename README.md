@@ -426,7 +426,7 @@ This repository and its contents build upon open-source tools, libraries, and pr
 * **LangChain & LangGraph teams** – for open-source tools enabling composable and memory-aware LLM agents.
 * **Hugging Face Transformers** – for state-of-the-art tokenizers and multilingual model support.
 * **Google & Gradio** – for making tools like Colab and easy-to-deploy UI components accessible.
-**Community contributors** – whose techniques and frameworks inspired this modular prompt architecture.
+* **Community contributors** – whose techniques and frameworks inspired this modular prompt architecture.
 
 ---
 
