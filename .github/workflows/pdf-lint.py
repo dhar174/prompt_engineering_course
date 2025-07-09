@@ -34,7 +34,7 @@ def is_raw_markdown_artifact(pdf_path):
         if len(table_lines) > 2:  # Multiple lines suggest a raw table
             # Check if it looks like a markdown table (not properly rendered)
             for line in table_lines[:3]:
-                if re.match(r'^\s*\|.*\|.*\|\s*$', line) and 'problem' in line and 'fix' in line:
+                if re.match(r'^\s*\|.*\|.*\|\s*$', line):
                     return True, f"Raw table found: {line[:50]}..."
         
         # 4. Code blocks with ``` that weren't rendered
