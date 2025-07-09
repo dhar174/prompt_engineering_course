@@ -143,6 +143,9 @@ This repository includes a curated collection of hands-on Jupyter notebooks, eac
 
 > 💡 **Tip:** Each notebook builds on foundational concepts and introduces hands-on tasks. Feel free to modify prompts, adjust parameters, and explore what works best for your use case.
 
+## Course Modules
+- [Module 1: Introduction to Prompt Engineering](docs/module_1_intro.md)
+
 ---
 ## Installation Instructions
 
