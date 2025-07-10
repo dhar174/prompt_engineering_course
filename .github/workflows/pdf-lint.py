@@ -27,7 +27,16 @@ def is_raw_markdown_artifact(pdf_path):
         # 2. Bold text that wasn't rendered (**text**)
         bold_matches = re.findall(r'\*\*[^*\s][^*]*[^*\s]\*\*', content)
         if bold_matches:
-            return True, f"Raw bold markdown found: {bold_matches[0]}"
+            # Check if this is in a documentation context (teaching markdown syntax)
+            for match in bold_matches:
+                # Look for context clues that this is intentional documentation
+                match_lines = [line for line in lines if match in line]
+                for line in match_lines:
+                    # Skip if it's in a context that suggests it's meant to show markdown syntax
+                    if any(keyword in line.lower() for keyword in ['markdown', 'syntax', 'example', 'track changes', 'format', 'delimiter', 'snippet']):
+                        continue
+                    # If no context clues found, it's likely unrendered markdown
+                    return True, f"Raw bold markdown found: {match}"
         
         # 3. Table pipes in obvious table context
         table_lines = [line for line in lines if line.count('|') >= 2 and len(line) > 10]
@@ -39,7 +48,14 @@ def is_raw_markdown_artifact(pdf_path):
         
         # 4. Code blocks with ``` that weren't rendered
         if content.count('```') >= 2:
-            return True, "Raw code blocks found with ``` markers"
+            # Check if this is in a documentation context (teaching markdown syntax)
+            lines_with_backticks = [line for line in lines if '```' in line]
+            for line in lines_with_backticks:
+                # Skip if it's in a context that suggests it's meant to show markdown syntax
+                if any(keyword in line.lower() for keyword in ['delimiter', 'quote', 'format', 'example', 'syntax', 'enclose', 'fences']):
+                    continue
+                # If no context clues found, it's likely unrendered markdown
+                return True, "Raw code blocks found with ``` markers"
         
         return False, None
         
