@@ -130,7 +130,7 @@ def markdown_to_story(md_text, styles):
         formatted_html = re.sub(r"\*(.+?)\*", r"<i>\1</i>", formatted_html)
         formatted_html = re.sub(r"`([^`]+)`", r"<font name='Courier'>\1</font>", formatted_html)
         # Handle links [text](url) -> show as underlined text
-        formatted_html = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"<u>\1</u>", formatted_html)
+        formatted_html = re.sub(r"\[([^\]]+)\]\([^)]+\)", lambda m: f"<u>{html.escape(m.group(1))}</u>", formatted_html)
         
         if formatted_html.strip():  # Only add non-empty paragraphs
             story.append(Paragraph(formatted_html, styles["BodyText"]))
