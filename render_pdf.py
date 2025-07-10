@@ -7,11 +7,12 @@ Based on the instructions in docs/howto_render_pdf.md
 from pathlib import Path
 import re
 import sys
+import html
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer,
-    Table, TableStyle, ListFlowable, ListItem
+    Table, TableStyle, ListFlowable, ListItem, Preformatted
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
@@ -113,7 +114,8 @@ def markdown_to_story(md_text, styles):
             # Create preformatted text block
             code_content = "\n".join(code_lines[1:-1])  # Remove opening and closing ```
             if code_content.strip():
-                story.append(Paragraph(f"<font name='Courier' size='10'>{code_content}</font>", styles["BodyText"]))
+                # Use Preformatted for better code block rendering
+                story.append(Preformatted(code_content, styles["Code"]))
                 story.append(Spacer(1, 6))
             continue
 
@@ -124,14 +126,14 @@ def markdown_to_story(md_text, styles):
             continue
 
         # 7. normal paragraph with inline bold / italic
-        html = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", line)
-        html = re.sub(r"\*(.+?)\*", r"<i>\1</i>", html)
-        html = re.sub(r"`([^`]+)`", r"<font name='Courier'>\1</font>", html)
+        formatted_html = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", line)
+        formatted_html = re.sub(r"\*(.+?)\*", r"<i>\1</i>", formatted_html)
+        formatted_html = re.sub(r"`([^`]+)`", r"<font name='Courier'>\1</font>", formatted_html)
         # Handle links [text](url) -> show as underlined text
-        html = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"<u>\1</u>", html)
+        formatted_html = re.sub(r"\[([^\]]+)\]\([^)]+\)", lambda m: f"<u>{html.escape(m.group(1))}</u>", formatted_html)
         
-        if html.strip():  # Only add non-empty paragraphs
-            story.append(Paragraph(html, styles["BodyText"]))
+        if formatted_html.strip():  # Only add non-empty paragraphs
+            story.append(Paragraph(formatted_html, styles["BodyText"]))
             story.append(Spacer(1, 6))
         i += 1
 
