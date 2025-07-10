@@ -12,7 +12,7 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer,
-    Table, TableStyle, ListFlowable, ListItem
+    Table, TableStyle, ListFlowable, ListItem, Preformatted
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
@@ -114,9 +114,8 @@ def markdown_to_story(md_text, styles):
             # Create preformatted text block
             code_content = "\n".join(code_lines[1:-1])  # Remove opening and closing ```
             if code_content.strip():
-                # Escape HTML characters to prevent parsing issues
-                escaped_content = html.escape(code_content)
-                story.append(Paragraph(f"<font name='Courier' size='10'>{escaped_content}</font>", styles["BodyText"]))
+                # Use Preformatted for better code block rendering
+                story.append(Preformatted(code_content, styles["Code"]))
                 story.append(Spacer(1, 6))
             continue
 
