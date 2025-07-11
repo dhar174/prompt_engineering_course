@@ -1,0 +1,6 @@
+gradio_app/gradio_rag_app.py:148:22: E231 missing whitespace after ':'
+gradio_app/gradio_rag_app.py:148:51: E231 missing whitespace after ':'
+gradio_app/gradio_rag_app.py:299:13: E221 multiple spaces before operator
+gradio_app/gradio_rag_app.py:300:13: E221 multiple spaces before operator
+gradio_app/gradio_rag_app.py:301:13: E221 multiple spaces before operator
+gradio_app/gradio_rag_app.py:302:13: E221 multiple spaces before operator

@@ -1,0 +1,80 @@
+./test_fallback_behavior.py:12:1: E302 expected 2 blank lines, found 1
+./test_fallback_behavior.py:15:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:17:73: W291 trailing whitespace
+./test_fallback_behavior.py:22:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:30:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:32:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:43:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:48:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:51:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:53:101: E501 line too long (106 > 100 characters)
+./test_fallback_behavior.py:54:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:57:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:61:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:64:1: W293 blank line contains whitespace
+./test_fallback_behavior.py:67:1: E305 expected 2 blank lines after class or function definition, found 1
+./test_fallback_behavior.py:74:20: W292 no newline at end of file
+./render_pdf.py:19:1: E302 expected 2 blank lines, found 1
+./render_pdf.py:22:1: W293 blank line contains whitespace
+./render_pdf.py:51:68: E231 missing whitespace after ','
+./render_pdf.py:51:84: E231 missing whitespace after ','
+./render_pdf.py:51:101: E501 line too long (110 > 100 characters)
+./render_pdf.py:53:1: W293 blank line contains whitespace
+./render_pdf.py:65:1: W293 blank line contains whitespace
+./render_pdf.py:69:38: E231 missing whitespace after ','
+./render_pdf.py:69:46: E231 missing whitespace after ','
+./render_pdf.py:70:32: E231 missing whitespace after ','
+./render_pdf.py:70:40: E231 missing whitespace after ','
+./render_pdf.py:71:32: E231 missing whitespace after ','
+./render_pdf.py:71:40: E231 missing whitespace after ','
+./render_pdf.py:72:34: E231 missing whitespace after ','
+./render_pdf.py:72:42: E231 missing whitespace after ','
+./render_pdf.py:73:39: E231 missing whitespace after ','
+./render_pdf.py:73:47: E231 missing whitespace after ','
+./render_pdf.py:74:40: E231 missing whitespace after ','
+./render_pdf.py:74:48: E231 missing whitespace after ','
+./render_pdf.py:89:101: E501 line too long (102 > 100 characters)
+./render_pdf.py:97:1: W293 blank line contains whitespace
+./render_pdf.py:113:1: W293 blank line contains whitespace
+./render_pdf.py:133:101: E501 line too long (120 > 100 characters)
+./render_pdf.py:134:1: W293 blank line contains whitespace
+./render_pdf.py:142:1: E302 expected 2 blank lines, found 1
+./render_pdf.py:145:1: W293 blank line contains whitespace
+./render_pdf.py:148:1: W293 blank line contains whitespace
+./render_pdf.py:157:1: W293 blank line contains whitespace
+./render_pdf.py:160:18: W291 trailing whitespace
+./render_pdf.py:162:23: W291 trailing whitespace
+./render_pdf.py:163:24: W291 trailing whitespace
+./render_pdf.py:164:22: W291 trailing whitespace
+./render_pdf.py:167:1: W293 blank line contains whitespace
+./render_pdf.py:172:1: E302 expected 2 blank lines, found 1
+./render_pdf.py:176:1: W293 blank line contains whitespace
+./render_pdf.py:179:1: W293 blank line contains whitespace
+./render_pdf.py:183:1: W293 blank line contains whitespace
+./render_pdf.py:190:1: E305 expected 2 blank lines after class or function definition, found 1
+./render_pdf.py:191:11: W292 no newline at end of file
+./.github/workflows/pdf-lint.py:12:1: E302 expected 2 blank lines, found 1
+./.github/workflows/pdf-lint.py:15:101: E501 line too long (105 > 100 characters)
+./.github/workflows/pdf-lint.py:17:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:19:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:26:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:36:101: E501 line too long (152 > 100 characters)
+./.github/workflows/pdf-lint.py:40:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:48:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:55:101: E501 line too long (138 > 100 characters)
+./.github/workflows/pdf-lint.py:59:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:61:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:65:1: E302 expected 2 blank lines, found 1
+./.github/workflows/pdf-lint.py:68:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:71:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:75:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:77:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:85:1: W293 blank line contains whitespace
+./.github/workflows/pdf-lint.py:97:1: E305 expected 2 blank lines after class or function definition, found 1
+./.github/workflows/pdf-lint.py:98:21: W292 no newline at end of file
+./gradio_app/gradio_rag_app.py:148:22: E231 missing whitespace after ':'
+./gradio_app/gradio_rag_app.py:148:51: E231 missing whitespace after ':'
+./gradio_app/gradio_rag_app.py:299:13: E221 multiple spaces before operator
+./gradio_app/gradio_rag_app.py:300:13: E221 multiple spaces before operator
+./gradio_app/gradio_rag_app.py:301:13: E221 multiple spaces before operator
+./gradio_app/gradio_rag_app.py:302:13: E221 multiple spaces before operator

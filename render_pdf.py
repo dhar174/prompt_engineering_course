@@ -66,12 +66,12 @@ def markdown_to_story(md_text, styles):
             if data:  # Only create table if we have data
                 tbl = Table(data, hAlign="LEFT")
                 tbl.setStyle(TableStyle([
-                    ("BACKGROUND", (0,0), (-1,0), colors.HexColor("#d0d0d0")),
-                    ("GRID", (0,0), (-1,-1), 0.25, colors.grey),
-                    ("FONT", (0,0), (-1,0), "Helvetica-Bold"),
-                    ("VALIGN", (0,0), (-1,-1), "TOP"),
-                    ("LEFTPADDING", (0,0), (-1,-1), 6),
-                    ("RIGHTPADDING", (0,0), (-1,-1), 6),
+                    ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#d0d0d0")),
+                    ("GRID", (0, 0), (-1, -1), 0.25, colors.grey),
+                    ("FONT", (0, 0), (-1, 0), "Helvetica-Bold"),
+                    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                    ("LEFTPADDING", (0, 0), (-1, -1), 6),
+                    ("RIGHTPADDING", (0, 0), (-1, -1), 6),
                 ]))
                 story.append(tbl)
                 story.append(Spacer(1, 12))
@@ -86,7 +86,9 @@ def markdown_to_story(md_text, styles):
                     indent_level = (len(lines[i]) - len(lines[i].lstrip())) // 2
                     bullet_html = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", bullet)
                     bullet_html = re.sub(r"\*(.+?)\*", r"<i>\1</i>", bullet_html)
-                    bullet_html = re.sub(r"`([^`]+)`", r"<font name='Courier'>\1</font>", bullet_html)
+                    courier_font_regex = r"`([^`]+)`"
+                    courier_font_replacement = r"<font name='Courier'>\1</font>"
+                    bullet_html = re.sub(courier_font_regex, courier_font_replacement, bullet_html)
                     if indent_level > base_indent:
                         sublist, i = parse_list(lines, i, indent_level)
                         items.append(ListFlowable(sublist, bulletType="bullet"))
@@ -130,7 +132,10 @@ def markdown_to_story(md_text, styles):
         formatted_html = re.sub(r"\*(.+?)\*", r"<i>\1</i>", formatted_html)
         formatted_html = re.sub(r"`([^`]+)`", r"<font name='Courier'>\1</font>", formatted_html)
         # Handle links [text](url) -> show as underlined text
-        formatted_html = re.sub(r"\[([^\]]+)\]\([^)]+\)", lambda m: f"<u>{html.escape(m.group(1))}</u>", formatted_html)
+        link_pattern = r"\[([^\]]+)\]\([^)]+\)"
+        def link_repl(m):
+            return f"<u>{html.escape(m.group(1))}</u>"
+        formatted_html = re.sub(link_pattern, link_repl, formatted_html)
         
         if formatted_html.strip():  # Only add non-empty paragraphs
             story.append(Paragraph(formatted_html, styles["BodyText"]))
