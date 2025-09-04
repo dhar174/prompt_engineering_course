@@ -1,7 +1,47 @@
-# Prompt Engineering Course
+# 24-Day Prompt Engineering Course
 Prompt engineering is the art and science of crafting effective inputs for large language models (LLMs) like GPT-4. With the rise of AI-driven systems in every domain — from chatbots to research assistants — prompt engineering has become a crucial skill for developers, researchers, and product teams alike.
 
-This course is designed as a hands-on, practical introduction to prompt engineering techniques, using real-world scenarios and interactive Jupyter notebooks. It focuses not only on how to prompt LLMs, but also on why certain prompt designs yield better results — based on model behavior, tokenization mechanics, and decoding strategies.
+This comprehensive 24-day course is designed as a hands-on, practical journey through prompt engineering techniques, using real-world scenarios and interactive Jupyter notebooks. The course has been thoughtfully restructured from an intensive 12-day format to provide better pacing, deeper learning, and enhanced practical application opportunities. Each day contains approximately 2.25 hours of content, allowing for thorough exploration without cognitive overload.
+
+## 24-Day Course Structure
+
+The course is organized into six distinct phases, each building upon previous knowledge while introducing new concepts and applications:
+
+### Phase 1: Foundations & Core Concepts (Days 1-6)
+- **Day 1**: Course Introduction & LLM Fundamentals
+- **Day 2**: Tokenization & Context Windows Deep Dive
+- **Day 3**: Model Internals & Attention Mechanisms
+- **Day 4**: Basic Prompt Controls & Style Management
+- **Day 5**: Decoding Parameters & Sampling Strategies
+- **Day 6**: Foundations Review & Debugging Practice
+
+### Phase 2: Prompt Patterns & Personas (Days 7-12)
+- **Day 7**: Zero/One/Few-Shot Prompting Patterns
+- **Day 8**: Role & Persona Engineering
+- **Day 9**: Expert & Multi-Persona Scenarios
+- **Day 10**: Template Engineering & Modularity
+- **Day 11**: Self-Consistency & Uncertainty Calibration
+- **Day 12**: Patterns Review & Advanced Debugging
+
+### Phase 3: Structured Outputs & Reasoning (Days 13-18)
+- **Day 13**: Structured Outputs & Validation
+- **Day 14**: Function Calling & Tool Integration
+- **Day 15**: Program-Aided Language Models (PAL)
+- **Day 16**: Meta-Prompting & Prompt Chaining
+- **Day 17**: Chain-of-Thought Foundations
+- **Day 18**: Advanced CoT Variants
+
+### Phase 4: Retrieval & Specialization (Days 19-20)
+- **Day 19**: Retrieval-Augmented Generation (RAG)
+- **Day 20**: Domain-Specific & Personalized Prompting
+
+### Phase 5: Advanced Techniques (Days 21-22)
+- **Day 21**: Soft Prompting & Automated Optimization
+- **Day 22**: Security, Safety & Guardrails
+
+### Phase 6: Production & Evaluation (Days 23-24)
+- **Day 23**: Tool Ecosystems & Multi-Agent Systems
+- **Day 24**: Evaluation, Deployment & Future Directions
 
 ### By the end of the course, you’ll be equipped to:
 * Understand how language models interpret and respond to prompts
