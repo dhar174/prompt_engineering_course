@@ -2,10 +2,12 @@ Absolutely! Here is a **detailed, minute-by-minute teaching plan for Day 1** of 
 
 ---
 
-## **Prompt Engineering: Day 1 – LLM Internals & Prompt Anatomy (Foundational Controls)**
+## **Prompt Engineering: Day 1 – Course Introduction & LLM Fundamentals**
 
 **Theme:**
-*How and why prompts work, what controls are available, and how the architecture and decoding parameters of LLMs shape all prompt outcomes.*
+*Setting the Foundation: Understanding LLMs and the Importance of Prompt Engineering*
+
+**Duration:** 135 minutes | **Focus:** Course orientation and fundamental concepts
 
 ### **0–15 min | Welcome & Course Introduction**
 
@@ -13,6 +15,45 @@ Absolutely! Here is a **detailed, minute-by-minute teaching plan for Day 1** of 
 * Syllabus and class goals walk-through.
 * **Prompt Engineering in 2025:** skills, jobs, landscape.
 * **Mindset:** *Iterative-Development*—experiment, debug, refine.
+
+---
+
+### **15–45 min | Prompt Engineering Landscape & Applications**
+
+* **Industry Applications:** Customer service, content creation, analysis, automation
+* **Career Opportunities:** Prompt engineers, AI product managers, system integrators
+* **Real-World Examples:** Live demonstrations of prompt-powered applications
+* **Skills Overview:** What students will learn throughout the 24-day journey
+
+---
+
+### **45–75 min | LLM Fundamentals & Architecture Overview**
+
+* **What are Large Language Models?** Basic architecture and capabilities
+* **Why Prompts Matter:** The interface between human intent and AI capability
+* **Model Behavior Basics:** How LLMs process and respond to inputs
+* **Prompt Engineering Principles:** Clarity, specificity, structure
+
+---
+
+### **75–90 min | BREAK**
+
+---
+
+### **90–120 min | First Prompt Exercise: Exploring Model Behavior**
+
+* **Hands-On Exploration:** Students interact with LLM using basic prompts
+* **Behavior Observation:** Noting variations in responses and output quality
+* **Pattern Recognition:** Identifying what makes prompts effective
+* **Discussion:** Sharing observations and initial insights
+
+---
+
+### **120–135 min | Homework Setup & Preview of Day 2**
+
+* **Assignment Overview:** Explore different prompt styles independently
+* **Day 2 Preview:** Tokenization and how LLMs "see" text
+* **Resource Distribution:** Access to course materials and platforms
 
 ---
 
