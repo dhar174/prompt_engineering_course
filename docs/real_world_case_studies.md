@@ -195,7 +195,7 @@ Generate response:
 **Quantified Results**:
 - **Time Savings**: 78% reduction in initial review time (4-6 hours → 1-1.5 hours)
 - **Accuracy Improvement**: 23% fewer missed clauses compared to manual-only review
-- **Cost Savings**: $280,000 annually in billable hour efficiency
+- **Cost Savings**: $340,000 annually in billable hour efficiency
 - **Client Satisfaction**: 34% improvement in turnaround time ratings
 
 **Quote from Managing Partner**: *"The prompt engineering approach allowed us to maintain our quality standards while dramatically improving efficiency. Our lawyers spend more time on strategy and less time on routine document scanning."*
@@ -511,7 +511,7 @@ OUTPUT_FORMAT (JSON):
   "urgency_level": "[URGENCY]", 
   "complexity_estimate": "[COMPLEXITY]",
   "suggested_routing": "[ROUTING]",
-  "confidence_score": [0.0-1.0],
+  "confidence_score": 0.85,
   "key_indicators": ["reason1", "reason2", "reason3"]
 }
 ```
@@ -779,7 +779,7 @@ Error Rate: 2.3% (target: <5%)
 **Cost Savings**:
 - **Year 1**: $340,000 in reduced billable hours
 - **Year 2**: $520,000 (improved efficiency + expanded usage)
-- **Total ROI**: 412% over 18 months
+- **Total ROI**: 1,233% over 18 months
 
 **Quality Improvements**:
 - 67% reduction in missed contractual obligations
@@ -835,7 +835,7 @@ Customer callback rate    23%       7%        -70%
 - Annual operational savings: $890,000
 - Reduced fraud losses: $1.2M (better customer engagement)
 - Implementation cost: $67,000
-- Net ROI: 1,420% (first year)
+- Net ROI: 3,021% (first year)
 
 #### Detailed Performance Analysis
 
