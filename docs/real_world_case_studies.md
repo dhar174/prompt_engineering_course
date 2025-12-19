@@ -18,7 +18,7 @@ This document compiles comprehensive case studies demonstrating prompt engineeri
 
 ### Healthcare: Clinical Documentation Assistant
 
-**Company**: Regional Medical Center Network  
+**Company**: Large Regional Medical Network  
 **Use Case**: Automated clinical note summarization and patient interaction documentation  
 **Implementation**: GPT-4-based system for processing doctor-patient conversations
 
