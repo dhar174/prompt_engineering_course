@@ -778,7 +778,7 @@ Error Rate: 2.3% (target: <5%)
 
 **Cost Savings**:
 - **Year 1**: $340,000 in reduced billable hours
-- **Year 2**: $520,000 (improved efficiency + expanded usage)
+- **Year 2** (first 6 months): $260,000 (improved efficiency + expanded usage)
 - **Total ROI**: 1,233% over 18 months
 
 **Quality Improvements**:
