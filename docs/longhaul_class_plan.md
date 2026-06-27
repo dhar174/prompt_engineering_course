@@ -940,6 +940,7 @@ Each session below is labeled sequentially (Session 1 through Session 72). Under
 
 * Analysis of large companies’ prompt engineering pipelines.
 * Common pitfalls, best practices, and success stories.
+* **Reference Material**: [Real-World Case Studies](real_world_case_studies.md) - comprehensive industry applications, success stories, and performance metrics.
 
 ---
 
